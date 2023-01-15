@@ -1,8 +1,9 @@
 <?php
 
+
 class Movie {
     private $titolo;
-    private $genere;
+    private $genere ;
     private $lingua;
     private $trama;
     private $actor_name;
@@ -16,12 +17,14 @@ class Movie {
     }
 
 
-    public function setGenere ($_genere){
+    public function setGenere(array $_genere){
         $this->genere = $_genere;
     }
+
     public function getGenere(){
         return $this->genere;
     }
+  
 
 
     public function setLingua ($_lingua){
@@ -55,14 +58,17 @@ class Movie {
         return $this->actor_surname ;
     }
 
-    function __construct($titolo,$genere,$lingua,$trama,$actor_name,$actor_surname){
+    function __construct($titolo, array $genere ,$lingua,$trama,$actor_name,$actor_surname){
 
         $this->setTitolo($titolo);
-        $this->setGenere($genere);
         $this->setLingua($lingua);
         $this->setTrama($trama);
         $this->setActorName($actor_name);
         $this->setActorSurname($actor_surname);
+        $this->setGenere($genere);
+        
+        
+
 
     }
 
