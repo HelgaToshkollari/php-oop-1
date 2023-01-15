@@ -1,14 +1,16 @@
 <?php
 require_once "./classes/Movie.php";
 
-$myMovie = new Movie("Nope","horror","eng","alieni invisibili , Ranch , Steven Yeun");
+$myMovie = new Movie("Nope","horror","eng","alieni invisibili , Ranch ","Steven","Yeun");
 //$myMovie -> titolo = "mamma ho perso l'aereo";
-
+//$myMovie->getActor();
 //$myMovie->setTitolo("yes");
 //$myMovie->setGenere("horror");
 //$myMovie->setLingua("eng");
 //$myMovie->setTrama("alieni invisibili , Ranch , Steven Yeun");
-echo "<pre>", var_dump($myMovie), "</pre>";
+ var_dump($myMovie);
+
+ echo $myMovie->getActor();
 
 ?>
 

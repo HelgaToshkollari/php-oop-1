@@ -5,6 +5,8 @@ class Movie {
     private $genere;
     private $lingua;
     private $trama;
+    private $actor_name;
+    private $actor_surname;
 
     public function setTitolo ($_titolo){
         $this->titolo = $_titolo;
@@ -37,16 +39,36 @@ class Movie {
         return $this->trama;
     }
 
-    function __construct($titolo,$genere,$lingua,$trama){
+
+    public function setActorName ($_actor_name){
+        $this->actor_name = $_actor_name;
+    }
+    public function getActorName (){
+        return $this->actor_name;
+    }
+
+    
+    public function setActorSurname ($_actor_surname){
+        $this->actor_surname = $_actor_surname;
+    }
+    public function getActorSurname (){
+        return $this->actor_surname ;
+    }
+
+    function __construct($titolo,$genere,$lingua,$trama,$actor_name,$actor_surname){
 
         $this->setTitolo($titolo);
         $this->setGenere($genere);
         $this->setLingua($lingua);
         $this->setTrama($trama);
+        $this->setActorName($actor_name);
+        $this->setActorSurname($actor_surname);
 
     }
-    
 
+    public function getActor(){
+        return $this->actor_name . " " . $this->actor_surname;
+    }
     
 
 }
